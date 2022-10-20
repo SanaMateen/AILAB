@@ -15,8 +15,7 @@ print("7.Pour all From Jug B to Jug A\n")
 print("8.Pour all From Jug A to Jug B\n")
 while ((ai!=af or bi!=bf)):
     op=int(input("Enter the Operation: "))
-    if(a==(a-b)):
-        print(f"problem can't be solved")
+    
     if(op==1):
         ai=a
     elif(op==2):
