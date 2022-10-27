@@ -15,6 +15,7 @@ print("7.Pour all From Jug B to Jug A\n")
 print("8.Pour all From Jug A to Jug B\n")
 while ((ai!=af or bi!=bf)):
     op=int(input("Enter the Operation: "))
+    
     if(op==1):
         ai=a
     elif(op==2):
@@ -39,10 +40,18 @@ while ((ai!=af or bi!=bf)):
             bi=bi-(a-ai)
             ai=a
     elif(op==7):
-        
-        ai=ai+bi
-        bi=0
+        if(a-ai>bi):
+            ai=ai+bi
+            bi=0
+        else:
+            print(f"water exceeds jug capacity {ai}")
+            break
     elif(op==8):
-        bi=bi+ai
-        ai=0
+        if(b-bi>ai):
+            bi=ai+bi
+            ai=0
+    else:
+        print(f"water exceeds jug capacity {bi}")
+        break
+        
     print(ai,bi)
